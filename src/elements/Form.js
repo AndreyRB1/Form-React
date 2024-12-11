@@ -53,10 +53,7 @@ const TeamImput = styled.div`
   width: 60%; 
 `;
 
-const Label = styled.label`
-  color: black;
-  font-size: 20px;
-`;
+
 
 const Input = styled.input`
   background: #522d9f;
@@ -68,7 +65,7 @@ const Input = styled.input`
   padding: 10px 35px; 
   transition: 0.3s ease all;
   color: aliceblue;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 
   &:focus {
     border: 1px solid ${colors.border};
@@ -177,5 +174,5 @@ const Figure = styled.div`
 
 export {Form, Container_Form, Section, Figure, TeamImput, Input,
         InputError, ValidationIcon, ImgHeader, Boton, mensajeError,
-        Label   
+           
 };

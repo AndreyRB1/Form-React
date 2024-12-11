@@ -1,13 +1,12 @@
 import React from "react";
-import {Input, ValidationIcon, TeamImput,Label} from "../elements/Form";
+import {Input, ValidationIcon, TeamImput} from "../elements/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
-const InputComponent = () => {
+const InputComponent = ({placeholder}) => {
     return (
         <TeamImput>
-            <Label htmlFor="" >CORREO</Label>
-            <Input type="text" placeholder="CORREO" id="correo"></Input>
+            <Input type="text" placeholder={placeholder} id="correo"></Input>
             <ValidationIcon icon={faCircleXmark} />
         </TeamImput>
     );

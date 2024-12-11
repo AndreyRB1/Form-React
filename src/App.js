@@ -22,7 +22,12 @@ const app = () => {
             <ImgHeader>
               <img src={Imagenes[1]} className="imgHeader" />
             </ImgHeader>
-            <InputComponent/>
+            <InputComponent
+              placeholder="CORREO"
+            />
+            <InputComponent
+              placeholder="CONTRASEÑA"
+            />
             <InputError>lorem as</InputError>
             <Boton type="submit">INGRESAR</Boton>
           </Form>
