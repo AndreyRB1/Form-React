@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css}from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const colors = {
@@ -75,6 +75,15 @@ const Input = styled.input`
   &::placeholder {
   color: rgba(255, 255, 255, 0.6); /* Color visible para el placeholder */
   }
+
+  ${props => props.valido === 'true' && css`
+    border: 1px solid ${colors.border};
+
+  `}
+    ${props => props.valido === 'false' && css`
+    border: 1px solid ${colors.error}!important;
+
+  `}
 `;
 
 const ValidationIcon = styled(FontAwesomeIcon)`
