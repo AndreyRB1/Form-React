@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Imagenes from "./assets/imagenes";
-import { Form , Container_Form, Section, Figure, TeamImput, Input, InputError, ValidationIcon} from "./elements/Form"
+import {
+  Form, Container_Form, Section, Figure, TeamImput, InputError, ValidationIcon, ImgHeader,
+  Boton} from "./elements/Form"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
-import { faCircleExclamation} from '@fortawesome/free-solid-svg-icons';
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import InputComponent  from "./components/InputComponent";
 
 
 
@@ -16,24 +19,16 @@ const app = () => {
       <Section>
         <Container_Form>
           <Form action="">
-            <TeamImput>
-            <Input type="text" placeholder="CORREO" id="correo"></Input>
-            <ValidationIcon icon={faCircleXmark} />
-            </TeamImput>
+            <ImgHeader>
+              <img src={Imagenes[1]} className="imgHeader" />
+            </ImgHeader>
+            <InputComponent/>
             <InputError>lorem as</InputError>
-            <div>
-              <p>
-                <FontAwesomeIcon icon={faCircleExclamation}/>
-                <b>ERROR</b> POR FAVOR RELLENAR EL FORMULARIO CORRECTAMENTE
-              </p>
-            </div>
-            <div>
-              <button type="submit">Enviar</button>
-             </div>
+            <Boton type="submit">INGRESAR</Boton>
           </Form>
         </Container_Form>
         <Figure>
-        <img src={Imagenes[0]}/>
+          <img src={Imagenes[0]} />
         </Figure>
       </Section>
     </main>
